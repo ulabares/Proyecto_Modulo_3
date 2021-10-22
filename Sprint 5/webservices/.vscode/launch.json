@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ApiparkingcontrolApplication<apiparkingcontrol>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.parking.control.apiparkingcontrol.ApiparkingcontrolApplication",
+            "projectName": "apiparkingcontrol",
+            "args": ""
+        }
+    ]
+}

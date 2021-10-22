@@ -24,31 +24,31 @@
                          
                           <div class="form-group">
                             <label for="inputdocumento" class="col-sm-5 col-form-label">Documento</label>
-                            <input type="number" class="form-control" name="txtdocumento">
+                            <input type="number" class="form-control" name="txtdocumento" id="txtdocumento">
                             <small class="form-text text-muted">Ingrese El No. de documento sin espacios ni caracteres
                               especiales</small>
                           </div>
                           <div class="form-group">
                             <label for="inputnombreCompleto" class="col-sm-10 col-form-label">Nombre completo</label>
-                            <input type="text" class="form-control" name="txtnombre"">
+                            <input type="text" class="form-control" name="txtnombre" id="txtnombre">
                            </div>
                               
                                                     <div class=" form-group">
                             <label for="inputCorreo" class="col-sm-5 col-form-label">Correo</label>
                             <div class="input-group">
                               <div class="input-group-text" id="btnGroupAddon">@</div>
-                              <input type="text" class="form-control" name="txtcorreo" placeholder="correo electrónico"
+                              <input type="text" class="form-control" name="txtcorreo" id="txtcorreo" placeholder="correo electrónico"
                                 aria-label="Input group example" aria-describedby="btnGroupAddon">
                             </div>
                           </div>
                           <div class="form-group">
                             <label for="inputPassword" class="col-sm-5 col-form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="inputPassword">
+                            <input type="password" class="form-control" id="txtpassword">
                                           
                           </div>
                             <div class="form-group">
                               <label for="inputrol" class="col-sm-5 col-form-label">Rol</label>
-                                <select class="form-select" aria-label="Default select" name="txtrol">
+                                <select class="form-select" aria-label="Default select" name="txtrol" id="txtrol">
                                   <option selected>Selecciona la opción</option>
                                     <option>Administrador</option>
                                     <option>Empleado</option>
@@ -57,19 +57,19 @@
                             </div>
                             <div class="form-group">
                               <label for="inputEstado" class="col-sm-5 col-form-label">Estado</label>
-                              <select class="form-select form-control-sm" name="txtestado">
+                              <select class="form-select form-control-sm" name="txtestado" id="txtestado">
                                 <option selected>Selecciona una opción</option>
                                     <option>Activo</option>
                                     <option>Inactivo</option>
                                 </select>
                             </div>
     
-                            <button type="submit" class="btn btn-primary mt-3" name="accion" ><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-plus" viewBox="0 0 20 20">
+                            <button type="submit" class="btn btn-primary mt-3" name="guardar" id="guardar" ><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-plus" viewBox="0 0 20 20">
                               <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
                               <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
                             </svg>Agregar</button>
                              
-                            <button type="submit" class="btn btn-success mt-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-check" viewBox="0 0 20 20">
+                            <button type="submit" class="btn btn-success mt-3" name="update" id="update"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-check" viewBox="0 0 20 20">
                               <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
                               <path fill-rule="evenodd" d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
                             </svg>Actualizar</button>
@@ -83,6 +83,17 @@
               </div>
     
             <div class="col-12 col-lg-9  p-2 ">
+              <div class="input-group mb-3">
+                <button type="submit" class="btn btn-primary me-3" name="cargar" id="cargar">Listar Usuarios</button>
+                <button  class="btn btn-outline-primary rounded-start" type="button" id="buscardocumento" name="buscardocumento"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 15 16">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>Buscar por documento</button>
+                <input type="text" id="buscar_documento" name="buscar_documento" class="form-control me-3" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                <button class="btn btn-outline-primary rounded-start" type="button" id="buscarid" name="buscarid"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 15 16">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>Buscar por id</button>
+                <input type="text" id="buscar_id" name="buscar_id" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+              </div>
               <article class="card">
                 <table class="table card-body ">
                   <thead class="thead-dark">
@@ -93,10 +104,10 @@
                           <th scope="col">Correo</th>
                           <th scope="col">Rol</th>
                           <th scope="col">Estado</th>
-                          <th scope="col">Acciones</th>
+                         
                       </tr>
                   </thead>
-                  <tbody>
+                  <tbody id="cuerpo">
   
   
                   </tbody>
@@ -117,6 +128,9 @@
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="/js/bootstrap.bundle.min.js" ></script>
+        <script src="/jquery/jquery-3.6.0.min.js"></script>
+       
+        <script src="/js/consultas_v1.js"></script>
     
 </body>
 </html>
