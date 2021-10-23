@@ -19,7 +19,7 @@
     <div class="row justify-content-center">
         <div class="col-md-5 ms-5 mb-5">
             <div class="card">
-                <h5 class="card-header">Datos cliente</h5>
+                <h5 class="card-header">Datos del vehiculo del cliente</h5>
                 <div class="card-body">
                     <form method="post" action="">
                         <div class="row">
@@ -28,7 +28,7 @@
                                
                             </div>
                             <div class="col-md-8 d-flex">
-                                <input type="submit" name="accion" value="BuscarPlaca" class="btn btn-outline-dark width:auto;">
+                                <input type="submit" name="accion" value="Buscar Placa" class="btn btn-outline-dark width:auto;">
                                 <a class="btn btn-success ms-2" onclick="print()" href="">Generar factura de cobro</a>
                             </div>
                             
@@ -51,14 +51,14 @@
                                         <form action="" method="POST">
                                             <div class="form-group">
                                                 <label>Código de factura</label>
-                                                <input type="number" class="form-control" name="txtdocumento">
+                                                <input type="number" class="form-control" name="txtdocumento" disabled readonly>
                                                 
                                             </div>
                                             
                                                 <div class="form-group">
                                                     <label>Fecha de ingreso</label>
                                                     <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                                                        <input class="form-control" size="16" type="text" value="" placeholder="Seleccione la fecha de ingreso"  readonly>
+                                                        <input class="form-control" size="16" type="text" value="" placeholder=""  disabled readonly>
                                                        
                                                         <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                                                     </div>
@@ -67,7 +67,7 @@
                                             <div class="form-group">
                                                 <label>Hora de ingreso</label>
                                                 <div class="input-group date form_time col-md-5" data-date="" data-date-format="hh:ii" data-link-field="dtp_input3" data-link-format="hh:ii">
-                                                    <input class="form-control" size="16" type="text" value=""  placeholder="Seleccione la fecha de ingreso" readonly>
+                                                    <input class="form-control" size="16" type="text" value=""  placeholder="" disabled readonly>
                                                     <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
                                                 </div>
                                                 <input type="hidden" id="dtp_input3" value="" /><br/>
@@ -75,36 +75,27 @@
                                             <div class="form-group">
                                                 <label>Placa</label>
                                                
-                                                <input class="form-control" type="text" placeholder="Escriba la placa del vehiculo" aria-label="default input Placa" name="txtplaca">
+                                                <input class="form-control" type="text" placeholder="" aria-label="default input Placa" name="txtplaca" disabled readonly>
                                             </div>
                                             <div class="form-group">
                                                 <label>Tipo de vehiculo</label>
-                                                <select class="form-select form-control form-control-sm" name="txttipoProcesador">
-                                                    <option>Moto</option>
-                                                    <option>Automovil</option>
-                                                    <option>Camioneta</option>
-                                                    <option>Minivan</option>
-                                                    <option>Camión</option>
-                                                </select>
+                                                <input class="form-control" type="text" placeholder=" " aria-label="default input Placa" name="txttipovehiculo" id="txttipovehiculo" disabled readonly>
+                                                
                                             </div>
                                             <div class="form-group">
                                                 <label>Marca</label>
-                                                <input class="form-control" type="text" placeholder="Escriba la marca del vehiculo" aria-label="default input Placa" name="txtmarca">
+                                                <input class="form-control" type="text" placeholder="" aria-label="default input Placa" name="txtmarca" id="txtmarca" disabled readonly>
                                             </div>
                                             
                                             <div class="form-group">
                                                 <label>Tipo de servicio</label>
-                                                <select class=" form-select form-control form-control-sm" name="txttipoServicio">
-                                                    <option>Diurno</option>
-                                                    <option>Nocturno</option>
-                                                    <option>Mensual</option>
-                                                    
-                                                </select>
+                                                <input class="form-control" type="text" placeholder="" aria-label="default input Placa" name="txttipoServicio" id="txttipoServicio" disabled readonly>
+                                                
                                             </div>
                                             <div class="form-group">
                                                 <label>Fecha de salida</label>
                                                 <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                                                    <input class="form-control" size="16" type="text" value="" placeholder="Seleccione la fecha de salida"  readonly>
+                                                    <input class="form-control" size="16" type="text" value="" placeholder=""  disabled readonly>
                                                     <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                                                 </div>
                                                 <input type="hidden" id="dtp_input2" value="" /><br/>
@@ -112,14 +103,14 @@
                                             <div class="form-group">
                                                 <label>Hora de salida</label>
                                                 <div class="input-group date form_time col-md-5" data-date="" data-date-format="hh:ii" data-link-field="dtp_input3" data-link-format="hh:ii">
-                                                    <input class="form-control" size="16" type="text" value=""  placeholder="Seleccione la fecha de salida" readonly>
+                                                    <input class="form-control" size="16" type="text" value=""  placeholder="" disabled readonly>
                                                     <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
                                                 </div>
                                                 <input type="hidden" id="dtp_input3" value="" /><br/>
                                             </div>
                                             <div class="form-group">
                                                 <label>Valor parqueo</label>
-                                                <input type="number" placeholder="Ingrese el valor del parqueo" class="form-control" name="txtprecio">
+                                                <input type="number" placeholder="" class="form-control" name="txtprecio" disabled readonly>
                                             </div>
                 
                                             <div class="form-group">
@@ -127,17 +118,7 @@
                                                 <textarea class="form-control" id="message-text" name="descripcion"></textarea>
                                             </div>
                 
-                                            <button type="submit" class="btn btn-primary mt-3" name="accion" >
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-earmark-check" viewBox="0 0 20 20">
-                                                    <path d="M10.854 7.854a.5.5 0 0 0-.708-.708L7.5 9.793 6.354 8.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
-                                                    <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
-                                                  </svg>Ingresar
-                                            </button>
-                                             
-                                            <button type="submit" class="btn btn-success mt-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-earmark-diff" viewBox="0 0 20 20">
-                                                <path d="M8 5a.5.5 0 0 1 .5.5V7H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V8H6a.5.5 0 0 1 0-1h1.5V5.5A.5.5 0 0 1 8 5zm-2.5 6.5A.5.5 0 0 1 6 11h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5z"/>
-                                                <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
-                                              </svg>Actualizar</button>
+                                            
                                         </form>
                                     </div>
                                   </div>

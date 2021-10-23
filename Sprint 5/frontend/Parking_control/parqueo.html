@@ -32,12 +32,7 @@
                     
                     <div>
                         <form action="" method="POST">
-                            <div class="form-group">
-                                <label>Código de factura</label>
-                                <input type="number" class="form-control" name="txtdocumento" id="txtdocumento">
-                                
-                            </div>
-                            
+                                                        
                                 <div class="form-group">
                                     <label>Fecha de ingreso</label>
                                     <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
@@ -57,11 +52,11 @@
                             </div>
                             <div class="form-group">
                                 <label>Placa</label>
-                                <input class="form-control" type="text" name="placa" id="placa" placeholder="Escriba la placa del vehiculo" aria-label="default input Placa" name="txtplaca">
+                                <input class="form-control" type="text" name="txtplaca" id="txtplaca" placeholder="Escriba la placa del vehiculo" aria-label="default input Placa" name="txtplaca">
                             </div>
                             <div class="form-group">
                                 <label>Tipo de vehiculo</label>
-                                <select class="form-select form-control form-control-sm" name="txttipoProcesador" id="txttipoProcesador">
+                                <select class="form-select form-control form-control-sm" name="txttipovehiculo" id="txttipovehiculo">
                                     <option>Moto</option>
                                     <option>Automovil</option>
                                     <option>Camioneta</option>
@@ -80,8 +75,7 @@
                                     <option>Diurno</option>
                                     <option>Nocturno</option>
                                     <option>Mensual</option>
-                                    
-                                </select>
+                               </select>
                             </div>
                             <div class="form-group">
                                 <label>Fecha de salida</label>
@@ -106,10 +100,10 @@
 
                             <div class="form-group">
                                 <label>Observaciones:</label>
-                                <textarea class="form-control" id="descripcion" name="descripcion"></textarea>
+                                <textarea class="form-control" id="txtdescripcion" name="txtdescripcion"></textarea>
                             </div>
 
-                            <button type="submit" class="btn btn-primary mt-3" name="accion" >
+                            <button type="submit" class="btn btn-primary mt-3" name="guardar" id="guardar" >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-earmark-check" viewBox="0 0 20 20">
                                     <path d="M10.854 7.854a.5.5 0 0 0-.708-.708L7.5 9.793 6.354 8.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
                                     <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
@@ -130,15 +124,15 @@
     
             <div class="col-12 col-lg-9  p-2 ">
                 <div class="input-group mb-3">
-                    <button type="button" class="btn btn-primary me-3">Listar parqueo</button>
-                    <button class="btn btn-outline-primary rounded-start" type="button" id="button-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 15 16">
+                    <button type="submit" class="btn btn-primary me-3" name="cargar" id="cargar">Listar parqueo</button>
+                    <button class="btn btn-outline-primary rounded-start" type="button" id="buscarplaca" name="buscarplaca"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 15 16">
                       <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                    </svg>Buscar por documento</button>
-                    <input type="text" class="form-control me-3" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                    <button class="btn btn-outline-primary rounded-start" type="button" id="button-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 15 16">
+                    </svg>Buscar por placa</button>
+                    <input type="text" class="form-control me-3" id="buscar_placa" name="buscar_placa" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                    <button class="btn btn-outline-primary rounded-start" type="button" name="buscaridd" id="buscaridd"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 15 16">
                       <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                     </svg>Buscar por id</button>
-                    <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                    <input type="text" class="form-control" placeholder="" name="buscar_id" id="buscar_id"  aria-label="Example text with button addon" aria-describedby="button-addon1">
                   </div>
               <article class="card">
                 <table class="table card-body ">
@@ -148,18 +142,19 @@
                         <th scope="col">F Ingreso</th>
                         <th scope="col">Hora I.</th>
                         <th scope="col">Placa</th>
-                        <th scope="col">Tipo de vehiculo</th>
+                        <th scope="col">T. vehiculo</th>
                         <th scope="col">Marca</th>
-                        <th scope="col">Tipo de servicio</th>
-                        <th scope="col">Fecha de salida</th>
-                        <th scope="col">Hora salida</th>
-                        <th scope="col">valor parqueo</th>
+                        <th scope="col">T. servicio</th>
+                        <th scope="col">F. salida</th>
+                        <th scope="col">Hora s.</th>
+                        <th scope="col">valor</th>
+                        <th scope="col">Observación</th>
                     </tr>
                 </thead>
-                  <tbody>
+                  <tbody id="cuerpo">
   
   
-                  </tbody>
+                  </tbody >
               </table>
 
               </article> 
@@ -177,7 +172,8 @@
           <script type="text/javascript" src="/js/bootstrap.min.js"></script>
           <script type="text/javascript" src="/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
           <script type="text/javascript" src="/js/bootstrap-datetimepicker.es.js" charset="UTF-8"></script>
-          <script type="text/javascript">
+         <script src="/js/query_parqueo.js"></script>
+         <script type="text/javascript">
             $('.form_datetime').datetimepicker({
                 //language:  'fr',
                 weekStart: 1,
